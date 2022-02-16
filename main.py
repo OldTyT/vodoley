@@ -1,11 +1,9 @@
-import asyncio
-
 from aiobalaboba import balaboba
 from sqlighter import SQLighter
+import asyncio
 import random
 
 balabob = ''  # В кавычки пишем запрос(то, что нужно продолжить)
-
 r = 10  # Количество строк результата в БД
 
 
