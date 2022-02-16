@@ -4,9 +4,10 @@ from aiobalaboba import balaboba
 from sqlighter import SQLighter
 import random
 
-balabob = '' # В кавычки пишем запрос(то, что нужно продолжить)
+balabob = ''  # В кавычки пишем запрос(то, что нужно продолжить)
 
-r = 10 # Количество строк результата в БД
+r = 10  # Количество строк результата в БД
+
 
 def rnd():
     chars = 'abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
@@ -16,7 +17,9 @@ def rnd():
         password += random.choice(chars)
     return password
 
+
 db = SQLighter(f'{rnd()}.db')
+
 
 async def main():
     count = 0

@@ -11,15 +11,16 @@ class SQLighter:
     def create_result(self):
         """Создаем бд"""
         with self.connection:
-            self.cursor.execute("""
-                                                            CREATE TABLE "results" (
-                                                                "id"	INTEGER,
-                                                                "text"	TEXT,
-                                                                PRIMARY KEY("id" AUTOINCREMENT)
-                                                            )""")
-        return False
+            return self.cursor.execute("""
+                                          CREATE TABLE "results" (
+                                            "id"	INTEGER,
+                                            "text"	TEXT,
+                                            PRIMARY KEY("id" AUTOINCREMENT)
+                                          )""")
 
     def add_result(self, text):
         """Добавляем новую запись в БД"""
         with self.connection:
-            return self.cursor.execute("INSERT INTO `results` (`text`) VALUES(?)", (text,))
+            return self.cursor.execute(
+                                        "INSERT INTO `results` (`text`) VALUES(?)",
+                                        (text,))
