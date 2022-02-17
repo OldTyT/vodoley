@@ -3,8 +3,9 @@ from sqlighter import SQLighter
 import asyncio
 import random
 
-balabob = ''  # В кавычки пишем запрос(то, что нужно продолжить)
-r = 10  # Количество строк результата в БД
+balabob = '''
+'''  # В кавычки пишем запрос(то, что нужно продолжить)
+r = 100  # Количество строк результата в БД
 
 
 def rnd():
@@ -23,16 +24,16 @@ db = SQLighter(f'{my_rnd}.db')
 async def main():
     count = 0
     db.create_result()
-    with open(f'{my_rnd}.txt', 'w') as f:
-        while True:
-            if count >= r:
-                break
-            response = await balaboba(balabob)
-            db.add_result(response)
-            f.write(f'''____________________№{count+1}____________________
+    f = open(f'{my_rnd}.txt', 'w')
+    while True:
+        if count >= r:
+            break
+        response = await balaboba(balabob)
+        db.add_result(response)
+        f.write(f'''____________________№{count+1}____________________
 {response}
 ____________________END____________________\n''')
-            count += 1
+        count += 1
 
 
 if __name__ == "__main__":
