@@ -23,4 +23,4 @@ Python программа, которая позволяет "лить воду"
 
 ## Проверка на уникальность
 
-![alt text](https://github.com/OldTyT/vodoley/raw/master/img/1.jpg)
+![alt text](https://raw.githubusercontent.com/OldTyT/vodoley/ed9f2357e53b8ab0d137e937600adc367bd55cb0/img/1.jpg)
